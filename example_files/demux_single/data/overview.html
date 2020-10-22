@@ -15,181 +15,233 @@
   <body>
     <div class="container-fluid">
         
+
+
 <div class="row">
     <div class="col-lg-12">
         <h1>Demultiplexed sequence counts summary</h1>
-        <table class="table table-striped table-hover">
-            <tr><td>Minimum:</td><td>1854</td></tr>
-            <tr><td>Median:</td><td>8646.5</td></tr>
-            <tr><td>Mean:</td><td>7762.676470588235</td></tr>
-            <tr><td>Maximum:</td><td>18787</td></tr>
-            <tr><td>Total:</td><td>263931</td></tr>
-        </table>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-lg-12 text-center">
-        <a href="demultiplex-summary.pdf">
-            <img src="demultiplex-summary.png">
-            <p>Download as PDF</p>
-        </a>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-lg-12">
-        <h1>Per-sample sequence counts</h1>
-        <h4>Total Samples: 34</h4>
         <table border="0" class="dataframe table table-striped table-hover">
   <thead>
     <tr style="text-align: right;">
-      <th>Sample name</th>
-      <th>Sequence count</th>
+      <th></th>
+      <th>forward reads</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>L4S137</td>
+      <th>Minimum</th>
+      <td>1854</td>
+    </tr>
+    <tr>
+      <th>Median</th>
+      <td>8646.5</td>
+    </tr>
+    <tr>
+      <th>Mean</th>
+      <td>7762.68</td>
+    </tr>
+    <tr>
+      <th>Maximum</th>
       <td>18787</td>
     </tr>
     <tr>
-      <td>L4S63</td>
+      <th>Total</th>
+      <td>263931</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+
+<div class="row">
+    
+        <div class="col-lg-6">
+            <h3>Forward Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <a href="demultiplex-summary-forward.pdf">
+                        <img src="demultiplex-summary-forward.png">
+                        <p>Download as PDF</p>
+                    </a>
+                
+            </div>
+        </div>
+    
+        <div class="col-lg-6">
+            <h3>Reverse Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <p>No reads in this direction</p>
+                
+            </div>
+        </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Per-sample sequence counts</h1>
+        <h4>
+            Total Samples:&nbsp;
+            
+                
+                    34 (forward)&nbsp;
+                
+            
+                
+            
+        </h4>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward sequence count</th>
+    </tr>
+    <tr>
+      <th>sample ID</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>L4S137</th>
+      <td>18787</td>
+    </tr>
+    <tr>
+      <th>L4S63</th>
       <td>17168</td>
     </tr>
     <tr>
-      <td>L4S112</td>
+      <th>L4S112</th>
       <td>16268</td>
     </tr>
     <tr>
-      <td>L1S8</td>
+      <th>L1S8</th>
       <td>12388</td>
     </tr>
     <tr>
-      <td>L2S240</td>
+      <th>L2S240</th>
       <td>11986</td>
     </tr>
     <tr>
-      <td>L1S57</td>
+      <th>L1S57</th>
       <td>11752</td>
     </tr>
     <tr>
-      <td>L1S105</td>
+      <th>L1S105</th>
       <td>11340</td>
     </tr>
     <tr>
-      <td>L1S208</td>
+      <th>L1S208</th>
       <td>11337</td>
     </tr>
     <tr>
-      <td>L6S93</td>
+      <th>L6S93</th>
       <td>11271</td>
     </tr>
     <tr>
-      <td>L2S175</td>
+      <th>L2S175</th>
       <td>10692</td>
     </tr>
     <tr>
-      <td>L1S76</td>
+      <th>L1S76</th>
       <td>10101</td>
     </tr>
     <tr>
-      <td>L6S20</td>
+      <th>L6S20</th>
       <td>9777</td>
     </tr>
     <tr>
-      <td>L1S140</td>
+      <th>L1S140</th>
       <td>9738</td>
     </tr>
     <tr>
-      <td>L6S68</td>
+      <th>L6S68</th>
       <td>9559</td>
     </tr>
     <tr>
-      <td>L2S382</td>
+      <th>L2S382</th>
       <td>9301</td>
     </tr>
     <tr>
-      <td>L2S155</td>
+      <th>L2S155</th>
       <td>9263</td>
     </tr>
     <tr>
-      <td>L1S281</td>
+      <th>L1S281</th>
       <td>8907</td>
     </tr>
     <tr>
-      <td>L2S222</td>
+      <th>L2S222</th>
       <td>8386</td>
     </tr>
     <tr>
-      <td>L1S257</td>
+      <th>L1S257</th>
       <td>8216</td>
     </tr>
     <tr>
-      <td>L2S204</td>
+      <th>L2S204</th>
       <td>7299</td>
     </tr>
     <tr>
-      <td>L2S357</td>
+      <th>L2S357</th>
       <td>6254</td>
     </tr>
     <tr>
-      <td>L2S309</td>
+      <th>L2S309</th>
       <td>3836</td>
     </tr>
     <tr>
-      <td>L5S104</td>
+      <th>L5S104</th>
       <td>3461</td>
     </tr>
     <tr>
-      <td>L5S222</td>
+      <th>L5S222</th>
       <td>3397</td>
     </tr>
     <tr>
-      <td>L5S203</td>
+      <th>L5S203</th>
       <td>3039</td>
     </tr>
     <tr>
-      <td>L5S174</td>
+      <th>L5S174</th>
       <td>2792</td>
     </tr>
     <tr>
-      <td>L5S240</td>
+      <th>L5S240</th>
       <td>2667</td>
     </tr>
     <tr>
-      <td>L5S155</td>
+      <th>L5S155</th>
       <td>2493</td>
     </tr>
     <tr>
-      <td>L3S294</td>
+      <th>L3S294</th>
       <td>2318</td>
     </tr>
     <tr>
-      <td>L3S378</td>
+      <th>L3S378</th>
       <td>2147</td>
     </tr>
     <tr>
-      <td>L3S360</td>
+      <th>L3S360</th>
       <td>2086</td>
     </tr>
     <tr>
-      <td>L3S242</td>
+      <th>L3S242</th>
       <td>2055</td>
     </tr>
     <tr>
-      <td>L3S313</td>
+      <th>L3S313</th>
       <td>1996</td>
     </tr>
     <tr>
-      <td>L3S341</td>
+      <th>L3S341</th>
       <td>1854</td>
     </tr>
   </tbody>
 </table>
-        <a href="per-sample-fastq-counts.csv">Download as CSV</a>
+        <a href="per-sample-fastq-counts.tsv">Download as TSV</a>
     </div>
 </div>
 
