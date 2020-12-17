@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_demux : summarize</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/child.js"></script>
+    
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+        
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Demultiplexed sequence counts summary</h1>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward reads</th>
+      <th>reverse reads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Minimum</th>
+      <td>80786</td>
+      <td>80786</td>
+    </tr>
+    <tr>
+      <th>Median</th>
+      <td>120823</td>
+      <td>120823</td>
+    </tr>
+    <tr>
+      <th>Mean</th>
+      <td>129268</td>
+      <td>129268</td>
+    </tr>
+    <tr>
+      <th>Maximum</th>
+      <td>222868</td>
+      <td>222868</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>2197558</td>
+      <td>2197558</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+
+<div class="row">
+    
+        <div class="col-lg-6">
+            <h3>Forward Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <a href="demultiplex-summary-forward.pdf">
+                        <img src="demultiplex-summary-forward.png">
+                        <p>Download as PDF</p>
+                    </a>
+                
+            </div>
+        </div>
+    
+        <div class="col-lg-6">
+            <h3>Reverse Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <a href="demultiplex-summary-reverse.pdf">
+                        <img src="demultiplex-summary-reverse.png">
+                        <p>Download as PDF</p>
+                    </a>
+                
+            </div>
+        </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Per-sample sequence counts</h1>
+        <h4>
+            Total Samples:&nbsp;
+            
+                
+                    17 (forward)&nbsp;
+                
+            
+                
+                    17 (reverse)&nbsp;
+                
+            
+        </h4>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward sequence count</th>
+      <th>reverse sequence count</th>
+    </tr>
+    <tr>
+      <th>sample ID</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DRR163084</th>
+      <td>222868</td>
+      <td>222868</td>
+    </tr>
+    <tr>
+      <th>DRR163079</th>
+      <td>169839</td>
+      <td>169839</td>
+    </tr>
+    <tr>
+      <th>DRR163077</th>
+      <td>154085</td>
+      <td>154085</td>
+    </tr>
+    <tr>
+      <th>DRR163076</th>
+      <td>145312</td>
+      <td>145312</td>
+    </tr>
+    <tr>
+      <th>DRR163082</th>
+      <td>144937</td>
+      <td>144937</td>
+    </tr>
+    <tr>
+      <th>DRR163081</th>
+      <td>141276</td>
+      <td>141276</td>
+    </tr>
+    <tr>
+      <th>DRR163073</th>
+      <td>135586</td>
+      <td>135586</td>
+    </tr>
+    <tr>
+      <th>DRR163072</th>
+      <td>125858</td>
+      <td>125858</td>
+    </tr>
+    <tr>
+      <th>DRR163083</th>
+      <td>120823</td>
+      <td>120823</td>
+    </tr>
+    <tr>
+      <th>DRR163078</th>
+      <td>119868</td>
+      <td>119868</td>
+    </tr>
+    <tr>
+      <th>DRR163080</th>
+      <td>118216</td>
+      <td>118216</td>
+    </tr>
+    <tr>
+      <th>DRR163069</th>
+      <td>114375</td>
+      <td>114375</td>
+    </tr>
+    <tr>
+      <th>DRR163075</th>
+      <td>108435</td>
+      <td>108435</td>
+    </tr>
+    <tr>
+      <th>DRR163071</th>
+      <td>108338</td>
+      <td>108338</td>
+    </tr>
+    <tr>
+      <th>DRR163074</th>
+      <td>100023</td>
+      <td>100023</td>
+    </tr>
+    <tr>
+      <th>DRR163068</th>
+      <td>86933</td>
+      <td>86933</td>
+    </tr>
+    <tr>
+      <th>DRR163070</th>
+      <td>80786</td>
+      <td>80786</td>
+    </tr>
+  </tbody>
+</table>
+        <a href="per-sample-fastq-counts.tsv">Download as TSV</a>
+    </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+</html>

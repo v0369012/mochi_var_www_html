@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_feature_table : summarize</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+<script src="js/vega.min.js"></script>
+<script src="js/vega-embed.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/spinkit.css" /> 
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="nav nav-tabs">
+        
+          <li class="">
+            <a href="index.html">
+              Overview
+            </a>
+          </li>
+        
+          <li class="active">
+            <a href="sample-frequency-detail.html">
+              Interactive Sample Detail
+            </a>
+          </li>
+        
+          <li class="">
+            <a href="feature-frequency-detail.html">
+              Feature Detail
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      
+
+
+<div class="row">
+
+  <div class="col-lg-8">
+    <div id="plot">
+      <div id="loading" class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Plot Controls</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12" id="toolbar"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12" id="metadata-category"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12" id="sampling-depth-slider"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12" id="text-field"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+  function handleErrors(errors, element, msg) {
+    console.error(errors);
+    msg = msg === undefined ? '' : msg + '<br><br>';
+    var helpMsg = '<p class="alert alert-danger"> \
+                   There was an error loading and rendering the \
+                   visualization.<br><br>' + msg + 'Please \
+                   copy-and-paste the following error messages when \
+                   reporting this error (please be aware that the content \
+                   of your analysis data and/or metadata is included in \
+                   these messages):</p>';
+    var helpMsgDiv = $('<div></div>');
+    helpMsgDiv.append(helpMsg);
+    helpMsgDiv.append('<pre><code>' + errors.join('\n\n') + '</code></pre>');
+    element.replaceWith(helpMsgDiv);
+  }
+  window.onerror = function(error) {
+    handleErrors([error], $('#loading'));
+  };
+</script>
+<script id="spec" type="application/json">
+{"$schema": "https://vega.github.io/schema/vega/v5.json", "autosize": {"contains": "content", "type": "fit-x", "resize": true}, "width": 800, "data": [{"transform": [{"as": "selectedCategory", "expr": "datum.metadata[category]", "type": "formula"}], "name": "table", "values": [{"id": "L1S8", "metadata": {"barcode-sequence": "AGCTGACTAGTC", "body-site": "gut", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-1", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 7300.0}, {"id": "L1S57", "metadata": {"barcode-sequence": "ACACACTATGGC", "body-site": "gut", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 8960.0}, {"id": "L1S76", "metadata": {"barcode-sequence": "ACTACGTGTGGT", "body-site": "gut", "year": 2009.0, "month": 2.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 112.0}, "frequency": 8096.0}, {"id": "L1S105", "metadata": {"barcode-sequence": "AGTGCGATGCGT", "body-site": "gut", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 8032.0}, {"id": "L2S155", "metadata": {"barcode-sequence": "ACGATGCGACCA", "body-site": "left palm", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 4353.0}, {"id": "L2S175", "metadata": {"barcode-sequence": "AGCTATCCACGA", "body-site": "left palm", "year": 2009.0, "month": 2.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 112.0}, "frequency": 4844.0}, {"id": "L2S204", "metadata": {"barcode-sequence": "ATGCAGCTCAGT", "body-site": "left palm", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 3593.0}, {"id": "L2S222", "metadata": {"barcode-sequence": "CACGTGACATGT", "body-site": "left palm", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 3584.0}, {"id": "L3S242", "metadata": {"barcode-sequence": "ACAGTTGCGCGA", "body-site": "right palm", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-1", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 944.0}, {"id": "L3S294", "metadata": {"barcode-sequence": "CACGACAGGCTA", "body-site": "right palm", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 1313.0}, {"id": "L3S313", "metadata": {"barcode-sequence": "AGTGTCACGGTG", "body-site": "right palm", "year": 2009.0, "month": 2.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 112.0}, "frequency": 1171.0}, {"id": "L3S341", "metadata": {"barcode-sequence": "CAAGTGAGAGAG", "body-site": "right palm", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 1038.0}, {"id": "L3S360", "metadata": {"barcode-sequence": "CATCGTATCAAC", "body-site": "right palm", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 1065.0}, {"id": "L5S104", "metadata": {"barcode-sequence": "CAGTGTCAGGAC", "body-site": "tongue", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-1", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 2379.0}, {"id": "L5S155", "metadata": {"barcode-sequence": "ATCTTAGACTGC", "body-site": "tongue", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 1908.0}, {"id": "L5S174", "metadata": {"barcode-sequence": "CAGACATTGCGT", "body-site": "tongue", "year": 2009.0, "month": 2.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 112.0}, "frequency": 2074.0}, {"id": "L5S203", "metadata": {"barcode-sequence": "CGATGCACCAGA", "body-site": "tongue", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 2238.0}, {"id": "L5S222", "metadata": {"barcode-sequence": "CTAGAGACTCTT", "body-site": "tongue", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-1", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 2640.0}, {"id": "L1S140", "metadata": {"barcode-sequence": "ATGGCAGCTCTA", "body-site": "gut", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-2", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 7482.0}, {"id": "L1S208", "metadata": {"barcode-sequence": "CTGAGATACGCG", "body-site": "gut", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 8524.0}, {"id": "L1S257", "metadata": {"barcode-sequence": "CCGACTGAGATG", "body-site": "gut", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 6588.0}, {"id": "L1S281", "metadata": {"barcode-sequence": "CCTCTCGTGATC", "body-site": "gut", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 6933.0}, {"id": "L2S240", "metadata": {"barcode-sequence": "CATATCGCAGTT", "body-site": "left palm", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-2", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 5774.0}, {"id": "L2S309", "metadata": {"barcode-sequence": "CGTGCATTATCA", "body-site": "left palm", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 1562.0}, {"id": "L2S357", "metadata": {"barcode-sequence": "CTAACGCAGTCA", "body-site": "left palm", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 2647.0}, {"id": "L2S382", "metadata": {"barcode-sequence": "CTCAATGACTCA", "body-site": "left palm", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 4477.0}, {"id": "L3S378", "metadata": {"barcode-sequence": "ATCGATCTGTGG", "body-site": "right palm", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-2", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 1316.0}, {"id": "L4S63", "metadata": {"barcode-sequence": "CTCGTGGAGTAG", "body-site": "right palm", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 10353.0}, {"id": "L4S112", "metadata": {"barcode-sequence": "GCGTTACACACA", "body-site": "right palm", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 9021.0}, {"id": "L4S137", "metadata": {"barcode-sequence": "GAACTGTATCTC", "body-site": "right palm", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 10592.0}, {"id": "L5S240", "metadata": {"barcode-sequence": "CTGGACTCATAG", "body-site": "tongue", "year": 2008.0, "month": 10.0, "day": 28.0, "subject": "subject-2", "reported-antibiotic-usage": "Yes", "days-since-experiment-start": 0.0}, "frequency": 1938.0}, {"id": "L6S20", "metadata": {"barcode-sequence": "GAGGCTCATCAT", "body-site": "tongue", "year": 2009.0, "month": 1.0, "day": 20.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 84.0}, "frequency": 7305.0}, {"id": "L6S68", "metadata": {"barcode-sequence": "GATACGTCCTGA", "body-site": "tongue", "year": 2009.0, "month": 3.0, "day": 17.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 140.0}, "frequency": 6533.0}, {"id": "L6S93", "metadata": {"barcode-sequence": "GATTAGCACTCT", "body-site": "tongue", "year": 2009.0, "month": 4.0, "day": 14.0, "subject": "subject-2", "reported-antibiotic-usage": "No", "days-since-experiment-start": 168.0}, "frequency": 7493.0}]}, {"transform": [{"type": "aggregate", "groupby": ["selectedCategory"]}], "name": "groupedBySelectedCategory", "source": "table"}, {"transform": [{"expr": "datum.frequency >= samplingDepth", "type": "filter"}, {"type": "aggregate", "groupby": ["selectedCategory"]}], "name": "groupedBySelectedCategoryAndRetained", "source": "table"}], "signals": [{"name": "width", "value": "", "bind": {"input": "text"}, "on": [{"events": {"source": "window", "type": "resize"}, "update": "containerSize()[0]"}]}, {"name": "chartHeight", "update": "width / 2.5"}, {"name": "chartOffset", "value": 20}, {"name": "height", "update": "chartHeight + chartOffset"}, {"name": "tooltip", "value": {}, "on": [{"events": "rect:mouseover", "update": "datum"}, {"events": "rect:mouseout", "update": "{}"}]}, {"bind": {"input": "select", "options": ["barcode-sequence", "body-site", "year", "month", "day", "subject", "reported-antibiotic-usage", "days-since-experiment-start"], "element": "#metadata-category"}, "name": "category", "value": "barcode-sequence"}, {"bind": {"input": "range", "element": "#sampling-depth-slider", "max": 10592, "min": 0, "step": 1}, "name": "samplingDepth", "value": 0}], "marks": [{"description": "Interactive rarefaction summary plot", "name": "rarefactionplot", "type": "group", "encode": {"enter": {"x": {"value": 0}, "y": {"signal": "chartOffset"}, "width": {"value": 200}, "height": {"signal": "chartHeight"}}}, "marks": [{"type": "rect", "from": {"data": "groupedBySelectedCategory"}, "encode": {"enter": {"x": {"scale": "xscale", "field": "selectedCategory"}, "width": {"scale": "xscale", "band": 1}, "y": {"scale": "yscale", "field": "count"}, "y2": {"scale": "yscale", "value": 0}}, "update": {"tooltip": {"signal": "{'title': datum.selectedCategory, 'Total Samples': datum.count}"}, "fill": {"value": "#D3D3D3"}, "x": {"scale": "xscale", "field": "selectedCategory"}, "width": {"scale": "xscale", "band": 1}, "y": {"scale": "yscale", "field": "count"}, "y2": {"scale": "yscale", "value": 0}}}}, {"type": "rect", "from": {"data": "groupedBySelectedCategoryAndRetained"}, "encode": {"enter": {"x": {"scale": "xscale", "field": "selectedCategory"}, "width": {"scale": "xscale", "band": 1}, "y": {"scale": "yscale", "field": "count"}, "y2": {"scale": "yscale", "value": 0}}, "update": {"tooltip": {"signal": "{'title': datum.selectedCategory, 'Samples Retained': datum.count}"}, "x": {"scale": "xscale", "field": "selectedCategory"}, "width": {"scale": "xscale", "band": 1}, "y": {"scale": "yscale", "field": "count"}, "y2": {"scale": "yscale", "value": 0}, "fill": {"value": "#1F77B4"}}, "hover": {"fill": {"value": "#60B3F7"}}}}, {"type": "text", "encode": {"enter": {"align": {"value": "center"}, "baseline": {"value": "top"}, "fill": {"value": "#000000"}}, "update": {"x": {"scale": "xscale", "signal": "tooltip.selectedCategory", "band": 0.5}, "y": {"scale": "yscale", "signal": "tooltip.count", "offset": -12}, "text": {"signal": "tooltip.count"}, "fillOpacity": [{"test": "datum === tooltip", "value": 0}, {"value": 1}]}}}], "scales": [{"name": "xscale", "type": "band", "domain": {"data": "groupedBySelectedCategory", "field": "selectedCategory", "sort": true}, "range": "width", "padding": 0.1, "round": true}, {"name": "yscale", "domain": {"fields": [{"data": "groupedBySelectedCategory", "field": "count"}]}, "nice": true, "range": [{"signal": "chartHeight"}, 0]}], "axes": [{"orient": "bottom", "scale": "xscale", "title": {"signal": "category"}, "labelAngle": 90, "labelAlign": "left", "labelBaseline": "middle"}, {"orient": "left", "scale": "yscale", "title": "Number of Samples", "tickMinStep": 1}]}]}
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var spec = JSON.parse(document.getElementById("spec").innerHTML);
+
+    // Try and come up with a good initial estimate of plot dimensions,
+    // based on the browser dimensions.
+    var opts = {
+      width: $("#plot").width(),
+      height: $("#plot").width() / 2.5
+    };
+
+    vegaEmbed("#plot", spec, opts)
+      .then(function(result) {
+        result.view.logLevel(vega.Warn);
+        // Stash the view object in global namespace for debugging purposes.
+        // Check out https://vega.github.io/vega/docs/api/debugging/
+        // for more details.
+        window.v = result.view;
+      })
+      .catch(function(error) {
+        // From 'js-error-handler.html'
+        handleErrors([error], $("#plot"));
+      });
+
+    // Clean up the vega-embed toolbar
+    var toolbar = $("div .vega-actions").detach();
+    toolbar.addClass("btn-group");
+    toolbar.children("a").each(function() {
+      // NOTE: We're just skipping this bit until we get the plot working with
+      // Vega 5
+      if(this.innerHTML == "Open in Vega Editor"){
+        this.remove()
+        return true
+      }
+      $(this).addClass("btn btn-default");
+    });
+
+    toolbar.appendTo("#toolbar");
+
+    var category = $("#metadata-category .vega-bind");
+    category
+      .children(".vega-bind-name")
+      .replaceWith("<label> Metadata Category &nbsp;</label>");
+    category.children("select").addClass("form-control");
+
+    var samplingDepthSlider = $("#sampling-depth-slider .vega-bind");
+    $(samplingDepthSlider)
+      .find("label")
+      .remove();
+    $(samplingDepthSlider)
+      .find("input")
+      .attr("id", "range-slider");
+    $(samplingDepthSlider)
+      .find("input")
+      .attr("oninput", "sliderHelperFunction(this.value);");
+    $(samplingDepthSlider).prepend(
+      "<label> Sampling Depth &nbsp; </label> <br>"
+    );
+    $(samplingDepthSlider).append(
+      '<br> <input id="text-box" class="form-control" type="number" value="0" min="0" oninput="textBoxHelperFunction(this.value);" />'
+    );
+    $(samplingDepthSlider).append("(zero implies no even sampling)");
+    samplingDepthSlider.children(".vega-bind-name").replaceWith("");
+
+    var rotateLabels = $("#rotate-labels .vega-bind");
+    rotateLabels
+      .children(".vega-bind-name")
+      .replaceWith("<label> Rotate Labels &nbsp;</label>");
+    rotateLabels.children("checkbox").addClass("form-control");
+  });
+</script>
+
+
+<div class="row">
+  <div class="col-lg-8">
+    <table id="feature-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Sample ID</th>
+          <th scope="col">Feature Count</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<script id="table-data" type="application/json">
+{"L4S137":10592.0,"L4S63":10353.0,"L4S112":9021.0,"L1S57":8960.0,"L1S208":8524.0,"L1S76":8096.0,"L1S105":8032.0,"L6S93":7493.0,"L1S140":7482.0,"L6S20":7305.0,"L1S8":7300.0,"L1S281":6933.0,"L1S257":6588.0,"L6S68":6533.0,"L2S240":5774.0,"L2S175":4844.0,"L2S382":4477.0,"L2S155":4353.0,"L2S204":3593.0,"L2S222":3584.0,"L2S357":2647.0,"L5S222":2640.0,"L5S104":2379.0,"L5S203":2238.0,"L5S174":2074.0,"L5S240":1938.0,"L5S155":1908.0,"L2S309":1562.0,"L3S378":1316.0,"L3S294":1313.0,"L3S313":1171.0,"L3S360":1065.0,"L3S341":1038.0,"L3S242":944.0}
+</script>
+
+<script type="text/javascript">
+  var totalFrequencies = 164070;
+  var sampleCount = 34;
+  var defaultDescription = "Retained " + (totalFrequencies.toLocaleString('en'))
+                                       + " (100.00%) features in "
+                                       + sampleCount + " (100.00%) samples at the specifed sampling depth.";
+
+
+  var textField = document.getElementById('text-field');
+  var tableBody = document.getElementById("table-body");
+  var table = document.getElementById("feature-table");
+
+  // when the viz loads the default description is displayed
+  textField.innerHTML = defaultDescription;
+
+  var sampleFrequency = JSON.parse(document.getElementById("table-data").innerHTML);
+  // get object keys and store them in an ascending order based on the key value
+  // this order is used to create the table rows
+  sortedSampleIDs = Object.keys(sampleFrequency).sort(function(a, b) {
+    var temp = sampleFrequency[a] - sampleFrequency[b];
+    // if two samples have the same number of features then we
+    // determine the order using the sample ID alphabetical order
+    if (temp == 0){
+      return b.localeCompare(a);
+    }
+
+  return temp;
+  });
+
+  sortedSampleIDs.forEach(function(element) {
+    var row = tableBody.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = element;
+    cell2.innerHTML = sampleFrequency[element];
+
+  });
+
+
+  function updateTableandText(val) {
+    var retainedSampleCount = 0;
+
+    // start the counter at 1 to ignore the header row
+    for (var i = 1; row = table.rows[i]; i++) {
+
+      if (Number(row.cells[1].innerHTML) < val) {
+        row.className = "danger";
+      } else {
+        row.className = "";
+        retainedSampleCount += 1;
+      }
+    }
+    if (val == 0){
+
+    textField.innerHTML = defaultDescription;
+
+    }
+    else{
+      var retainedFeatureCount = retainedSampleCount * val;
+      textField.innerHTML = "Retained " + retainedFeatureCount.toLocaleString('en')
+                                        + " (" + (retainedFeatureCount/totalFrequencies*100).toFixed(2) + "%) features in "
+                                        + retainedSampleCount + " (" + (retainedSampleCount/sampleCount*100).toFixed(2)
+                                        +  "%) samples at the specifed sampling depth.";
+    }
+
+  }
+
+
+  function updateSliderVal(val) {
+    var slider = document.getElementById("range-slider");
+    slider.value = val;
+    slider.dispatchEvent(new Event("change"));
+    slider.dispatchEvent(new Event("input"));
+  }
+
+
+  function updateBoxVal(val) {
+    var num = document.getElementById("text-box");
+    num.value = val;
+  }
+
+
+  function sliderHelperFunction(val){
+    updateBoxVal(val);
+    updateTableandText(val);
+
+  }
+
+
+  function textBoxHelperFunction(val){
+    val = parseInt(val);
+    if (val !== val) {
+      val = 0;
+    }
+
+    // make sure the value in the textbox cannot exceed the max count
+    if (val > 10592.0){
+      var num = document.getElementById("text-box");
+      num.value = 10592.0;
+    }
+    updateSliderVal(val);
+  }
+</script>
+
+
+    </div>
+  </div>
+
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+
+  </body>
+</html>
