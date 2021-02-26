@@ -1,9 +1,0 @@
-sample-id	input	filtered	percentage of input passed filter	denoised	non-chimeric	percentage of input non-chimeric
-#q2:types	numeric	numeric	numeric	numeric	numeric	numeric
-L1S105	11340	545	4.81	499	499	4.4
-L1S140	9736	275	2.82	233	233	2.39
-L1S208	11335	661	5.83	619	619	5.46
-L1S257	8216	538	6.55	479	479	5.83
-L1S57	11750	726	6.18	694	694	5.91
-L1S76	10100	411	4.07	379	379	3.75
-L1S8	12386	338	2.73	313	313	2.53

@@ -1,0 +1,289 @@
+execution:
+    uuid: 8462637a-0805-4293-b5b1-700197b04539
+    runtime:
+        start: 2021-02-02T03:18:23.203199+00:00
+        end: 2021-02-02T03:18:53.232654+00:00
+        duration: 30 seconds, and 29455 microseconds
+
+action:
+    type: import
+    format: CasavaOneEightSingleLanePerSampleDirFmt
+    manifest:
+    -   name: BM12w0_S50_L001_R1_001.fastq.gz
+        md5sum: f5e5c0d8fa279629495cdf5607af9da1
+    -   name: BM12w0_S50_L001_R2_001.fastq.gz
+        md5sum: 389a04184591e1402a01851a9a3b7696
+    -   name: BM12w4_S51_L001_R1_001.fastq.gz
+        md5sum: c8b38dab5d95c9606f16c4f1605c6762
+    -   name: BM12w4_S51_L001_R2_001.fastq.gz
+        md5sum: 84ae5fc6c5a07df0326d2c727e1e565e
+    -   name: BM13w0_S70_L001_R1_001.fastq.gz
+        md5sum: fcd42f9334160a1e00db5f9d8cee684a
+    -   name: BM13w0_S70_L001_R2_001.fastq.gz
+        md5sum: 305065b4991f035ae3493da28afda74d
+    -   name: BM14w0_S53_L001_R1_001.fastq.gz
+        md5sum: edf7f41085218b469d3757232104ba71
+    -   name: BM14w0_S53_L001_R2_001.fastq.gz
+        md5sum: 6587b22ddd8f002df04c629cbbf4c953
+    -   name: BM15w0_S54_L001_R1_001.fastq.gz
+        md5sum: f54a2c15e6a8e612f54f80bbb85d3a73
+    -   name: BM15w0_S54_L001_R2_001.fastq.gz
+        md5sum: f997739bf22ae7425de2e2692690531f
+    -   name: BM16w0_S55_L001_R1_001.fastq.gz
+        md5sum: 53809c08918fd88f92f84f78b05fe6bf
+    -   name: BM16w0_S55_L001_R2_001.fastq.gz
+        md5sum: 7a850e825bf8f4458a8049f3048df9bf
+    -   name: BM17w0_S56_L001_R1_001.fastq.gz
+        md5sum: 1e3478341edf917f6db50b5935bfbc89
+    -   name: BM17w0_S56_L001_R2_001.fastq.gz
+        md5sum: 9a6597bb95431387318ff832e2dfb970
+    -   name: BM2w0_S69_L001_R1_001.fastq.gz
+        md5sum: e26c1fbba3adc0628a91dfb1bce7080b
+    -   name: BM2w0_S69_L001_R2_001.fastq.gz
+        md5sum: 950a97280d9d24d9415736782f6ce119
+    -   name: BM2w4_S29_L001_R1_001.fastq.gz
+        md5sum: e7a420ca3ea0b23c73f00b7c61928f7b
+    -   name: BM2w4_S29_L001_R2_001.fastq.gz
+        md5sum: 278cb3aef1a76ba51c59ca1ecff89708
+    -   name: BM2w8_S30_L001_R1_001.fastq.gz
+        md5sum: df413ad919e09e96bdf76342db90f19f
+    -   name: BM2w8_S30_L001_R2_001.fastq.gz
+        md5sum: f8d9d8251ca4cc32611a0a4c955c3848
+    -   name: BM4w0_S32_L001_R1_001.fastq.gz
+        md5sum: 25341c8439f40f22b561d7cdd11a4810
+    -   name: BM4w0_S32_L001_R2_001.fastq.gz
+        md5sum: 1b7fc71c53c84661af0fa4e36691a6de
+    -   name: BM4w4_S33_L001_R1_001.fastq.gz
+        md5sum: 9053a730f75cc707333762bba2f908dc
+    -   name: BM4w4_S33_L001_R2_001.fastq.gz
+        md5sum: a2f64c469b3bbcae2b27270009c33c6c
+    -   name: BM4w8_S34_L001_R1_001.fastq.gz
+        md5sum: 860a76ab30554032440b0f5baa659d80
+    -   name: BM4w8_S34_L001_R2_001.fastq.gz
+        md5sum: b33cb7f614968141be9cfcd38d7d1163
+    -   name: BM5w0_S35_L001_R1_001.fastq.gz
+        md5sum: 35de411de09d104d43f9afd7bb3fe81c
+    -   name: BM5w0_S35_L001_R2_001.fastq.gz
+        md5sum: 0acf7846174c977389b3e37a3e507290
+    -   name: BM5w4_S36_L001_R1_001.fastq.gz
+        md5sum: 987919208573119cab0cc3c45f49cdf6
+    -   name: BM5w4_S36_L001_R2_001.fastq.gz
+        md5sum: 0d780d7197882adbaad723a46e227d80
+    -   name: BM5w8_S37_L001_R1_001.fastq.gz
+        md5sum: 8c25414d7bb1d5ab61eb7ff6eaa6678b
+    -   name: BM5w8_S37_L001_R2_001.fastq.gz
+        md5sum: fa18a6db7e6232831f6d6aa5e323fcd6
+    -   name: BM6w0_S38_L001_R1_001.fastq.gz
+        md5sum: a318e50bdadbecc38d839e836f3aebc1
+    -   name: BM6w0_S38_L001_R2_001.fastq.gz
+        md5sum: 4a554f997693547f1ab21b3b13dc717d
+    -   name: BM6w4_S39_L001_R1_001.fastq.gz
+        md5sum: 00e1abf78256f879e7ab661b78f2f091
+    -   name: BM6w4_S39_L001_R2_001.fastq.gz
+        md5sum: 800f23dc0c306e7a9b23273f23380643
+    -   name: BM7w0_S40_L001_R1_001.fastq.gz
+        md5sum: a26be60b09e7659378c156c821ce2106
+    -   name: BM7w0_S40_L001_R2_001.fastq.gz
+        md5sum: 2c3df52fa49ebfb3eca6538952d8698b
+    -   name: BM7w4_S41_L001_R1_001.fastq.gz
+        md5sum: 4b7101fe13fe2afc3b389a987614b7d4
+    -   name: BM7w4_S41_L001_R2_001.fastq.gz
+        md5sum: 5867e3a09373a0126ec8fd28f92abbc6
+    -   name: BM8w0_S42_L001_R1_001.fastq.gz
+        md5sum: 1c9ad8abea52bdbff666b78764feffcb
+    -   name: BM8w0_S42_L001_R2_001.fastq.gz
+        md5sum: 77a9373e91b6c6c0affe980999bb96a5
+    -   name: BM8w4_S43_L001_R1_001.fastq.gz
+        md5sum: 450278d67b5a0dcede4e4c3c9b91f1d6
+    -   name: BM8w4_S43_L001_R2_001.fastq.gz
+        md5sum: 08f1f2c348d4a81a841174434bbfef78
+    -   name: BM9w0_S44_L001_R1_001.fastq.gz
+        md5sum: 6197e3f21f43af0e43be6ebf6cd8540a
+    -   name: BM9w0_S44_L001_R2_001.fastq.gz
+        md5sum: 2247d81e90094988e2463cd52795eda1
+    -   name: BM9w4_S45_L001_R1_001.fastq.gz
+        md5sum: ee109b38f879a77fa78101030112c1b7
+    -   name: BM9w4_S45_L001_R2_001.fastq.gz
+        md5sum: 20fcf754f7d4527f6df5e1e6b6bba319
+    -   name: FM10w0_S46_L001_R1_001.fastq.gz
+        md5sum: 1624240ee756511548a1da9d74ccef21
+    -   name: FM10w0_S46_L001_R2_001.fastq.gz
+        md5sum: 9c71d727223d249f980586be9818f9da
+    -   name: FM10w4_S47_L001_R1_001.fastq.gz
+        md5sum: 7e394ba07e7280cbd2bf6df18728780d
+    -   name: FM10w4_S47_L001_R2_001.fastq.gz
+        md5sum: 3f6954ec709b8ff7d6f57fff633dc94c
+    -   name: FM1w0_S25_L001_R1_001.fastq.gz
+        md5sum: d9da70211cdc8e257c0bfbb44dab99b8
+    -   name: FM1w0_S25_L001_R2_001.fastq.gz
+        md5sum: 3e2407d504991fb3bfcf163afecc975b
+    -   name: FM1w4_S26_L001_R1_001.fastq.gz
+        md5sum: 940326004955c045628002f2b9984b37
+    -   name: FM1w4_S26_L001_R2_001.fastq.gz
+        md5sum: ad0f06a0d4619caaa3f893defb06aaf8
+    -   name: FM1w8_S27_L001_R1_001.fastq.gz
+        md5sum: af34118cc331d50b72df1c0d694d446d
+    -   name: FM1w8_S27_L001_R2_001.fastq.gz
+        md5sum: d53e972aa178ddf8c45d4f3ed7134acd
+    -   name: FM3w0_S31_L001_R1_001.fastq.gz
+        md5sum: c9833b758746919dff27bec79b4590db
+    -   name: FM3w0_S31_L001_R2_001.fastq.gz
+        md5sum: bf67583c43a4353a09e30ec8251d08bf
+
+transformers:
+    output:
+    -   from: CasavaOneEightSingleLanePerSampleDirFmt
+        to: SingleLanePerSamplePairedEndFastqDirFmt
+        plugin: !ref 'environment:plugins:types'
+
+environment:
+    platform: linux-x86_64
+    python: |-
+        3.6.10 | packaged by conda-forge | (default, Apr 24 2020, 16:44:11)
+        [GCC 7.3.0]
+    framework:
+        version: 2020.8.0
+        website: https://qiime2.org
+        citations:
+        - !cite 'framework|qiime2:2020.8.0|0'
+    plugins:
+        types:
+            version: 2020.8.0
+            website: https://github.com/qiime2/q2-types
+    python-packages:
+        zipp: 3.1.0
+        xopen: 0.9.0
+        widgetsnbextension: 3.5.1
+        wheel: 0.35.1
+        webencodings: 0.5.1
+        wcwidth: 0.2.5
+        urllib3: 1.25.10
+        unifrac: 0.10.0
+        tzlocal: '2.1'
+        typing-extensions: 3.7.4.2
+        traitlets: 4.3.3
+        tornado: 6.0.4
+        toml: 0.10.1
+        threadpoolctl: 2.1.0
+        testpath: 0.4.4
+        terminado: 0.8.3
+        statsmodels: 0.11.1
+        six: 1.15.0
+        setuptools: 49.6.0.post20201009
+        sepp: 4.3.10
+        Send2Trash: 1.5.0
+        seaborn: 0.10.1
+        scipy: 1.5.2
+        scikit-learn: 0.23.1
+        scikit-bio: 0.5.5
+        requests: 2.24.0
+        qiime2: 2020.8.0
+        q2templates: 2020.8.0
+        q2cli: 2020.8.0
+        q2-vsearch: 2020.8.0
+        q2-types: 2020.8.0
+        q2-taxa: 2020.8.0
+        q2-sample-classifier: 2020.8.0
+        q2-quality-filter: 2020.8.0
+        q2-quality-control: 2020.8.0
+        q2-phylogeny: 2020.8.0
+        q2-metadata: 2020.8.0
+        q2-longitudinal: 2020.8.0
+        q2-gneiss: 2020.8.0
+        q2-fragment-insertion: 2020.8.0
+        q2-feature-table: 2020.8.0
+        q2-feature-classifier: 2020.8.0
+        q2-emperor: 2020.8.0
+        q2-diversity: 2020.8.0
+        q2-diversity-lib: 2020.8.0
+        q2-demux: 2020.8.0
+        q2-deblur: 2020.8.0
+        q2-dada2: 2020.8.0
+        q2-cutadapt: 2020.8.0
+        q2-composition: 2020.8.0
+        q2-alignment: 2020.8.0
+        pyzmq: 19.0.2
+        PyYAML: 5.3.1
+        pytz: '2020.1'
+        python-dateutil: 2.8.1
+        pytest: 6.0.1
+        PySocks: 1.7.1
+        pyrsistent: 0.16.0
+        pyparsing: 2.4.7
+        pyOpenSSL: 19.1.0
+        Pygments: 2.6.1
+        pycparser: '2.20'
+        py: 1.9.0
+        ptyprocess: 0.6.0
+        psutil: 5.7.2
+        prompt-toolkit: 3.0.6
+        prometheus-client: 0.8.0
+        pluggy: 0.13.1
+        pip: 20.2.2
+        Pillow: 7.2.0
+        pickleshare: 0.7.5
+        pexpect: 4.8.0
+        patsy: 0.5.1
+        parso: 0.7.1
+        pandocfilters: 1.4.2
+        pandas: 0.25.3
+        packaging: '20.4'
+        olefile: '0.46'
+        numpy: 1.19.1
+        notebook: 6.1.3
+        nose: 1.3.7
+        networkx: '2.4'
+        nbformat: 5.0.7
+        nbconvert: 5.6.1
+        natsort: 7.0.1
+        msgpack: 1.0.0
+        more-itertools: 8.4.0
+        mistune: 0.8.4
+        matplotlib: 3.2.2
+        MarkupSafe: 1.1.1
+        lockfile: 0.12.2
+        kiwisolver: 1.2.0
+        jupyter-core: 4.6.3
+        jupyter-client: 6.1.6
+        jsonschema: 3.2.0
+        joblib: 0.16.0
+        Jinja2: 2.11.2
+        jedi: 0.17.2
+        ipywidgets: 7.5.1
+        ipython: 7.16.1
+        ipython-genutils: 0.2.0
+        ipykernel: 5.3.4
+        iniconfig: 1.0.1
+        importlib-metadata: 1.7.0
+        ijson: 3.1.1
+        idna: '2.10'
+        hdmedians: '0.13'
+        h5py: 2.10.0
+        gneiss: 0.4.6
+        future: 0.18.2
+        fastcluster: 1.1.26
+        entrypoints: '0.3'
+        emperor: 1.0.1
+        dnaio: 0.4.2
+        DendroPy: 4.4.0
+        defusedxml: 0.6.0
+        decorator: 4.4.2
+        deblur: 1.1.0
+        Cython: 0.29.21
+        cycler: 0.10.0
+        cutadapt: '2.10'
+        cryptography: '3.0'
+        click: 7.1.2
+        chardet: 3.0.4
+        cffi: 1.14.1
+        certifi: 2020.6.20
+        CacheControl: 0.12.6
+        brotlipy: 0.7.0
+        bokeh: 2.1.1
+        bleach: 3.1.5
+        biom-format: 2.1.8
+        bibtexparser: 1.1.0
+        backports.functools-lru-cache: 1.6.1
+        backcall: 0.2.0
+        attrs: 20.1.0
+        argon2-cffi: 20.1.0
